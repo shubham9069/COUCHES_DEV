@@ -1,0 +1,87 @@
+.top-button{
+    padding:3rem 0;
+    border-bottom: 3px solid white;
+    transition: border 0.4s ease-in-out;
+    cursor:pointer;
+}
+
+
+/* ------------profile--------------- */
+.edit-profile-container{
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+border-radius:10px
+}
+.edit-profile-container-left,.edit-profile-container-right{
+   flex:1
+}
+.edit-profile-container-left>img{
+   border-radius: 50%;
+   width: 200px;
+   height: 200px;
+   
+   margin: 0 auto;
+}
+.editprofile-input{
+    display: flex;
+    grid-gap :20px;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.editprofile-input>label{
+   width: 200px;
+   font-size:13px;
+   font-weight: 600;
+
+}
+.editprofile-input>input,.profile-input{
+    max-width: 400px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    border-radius: 5.74011px;
+
+    font-size: 14px;
+   
+    outline: none;
+    transition: all .4s;
+    width: 100%;
+    padding: 6px 24px;
+
+}
+.imageinput{
+margin: 1rem auto;
+width: 106px;
+
+}
+
+@media screen and (max-width:800px) {
+    .edit-profile-container{
+        flex-direction: column;
+        grid-gap:40px
+    }
+    
+}
+
+/* ------------------modal address-------------------------- */
+
+.radio {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    width: 26px;
+    height: 27px;
+    border-radius: 100% !important;
+    margin-right: 10px;
+    border: 1.5px solid #e2bc3f;
+    transition: 0.2s ease-in-out;
+}
+
+
+
+
+    
+    .modale-Addaddress>.modal-dialog{
+        width:70% !important;
+         max-width:1000px !important;
+    }

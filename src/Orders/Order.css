@@ -1,0 +1,67 @@
+
+
+.invoice{
+    padding:4px 8px ;
+    border:1px solid rgb(204, 204, 204);
+    border-radius:8px;
+    font-size:12px;
+    font-weight:600
+}
+.trackorder{
+    padding:4px 8px ;
+    border:1px solid #0085ff;
+    border-radius:8px;
+    font-size:12px;
+    font-weight:600;
+    background-color:#0085ff;
+    color:white
+}
+
+.orderDetails-chair{
+padding: 1rem;
+grid-gap:20px;
+margin:0.5rem 0;
+
+    
+}
+.orderDetails-chair:last-child{
+    border-Bottom:1px solid rgb(204, 204, 204)
+
+    
+}
+.orderDetails-img{
+   background-color: #e7e7e780;
+   border: 1px solid rgb(204, 204, 204);
+   padding: 1rem;
+   border-radius:10px;
+
+}
+.orderDetails-text{
+    flex: 1;
+}
+.orderDetails-img>img{
+    
+    width:90px;
+    height: 90px;
+
+}
+.orderDetails-payment{
+    display: flex;
+   
+    grid-gap:20px
+}
+.orderDetails-payment>div{
+    flex:0 1 300px;
+    padding:1rem;
+    width:fit-content;
+    border: 1px solid rgb(204, 204, 204);
+}
+.orderDetails-bottom{
+    margin: 2rem 0 ;
+    display: flex;
+    justify-content:space-between;
+    grid-gap:20px
+}
+.orderDetails-bottom>div{
+    flex:1
+}
