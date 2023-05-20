@@ -33,7 +33,7 @@ export const Category = () => {
     // ===========price bar minmax===========
   
     const MinMax = (value) => {
-      var updateArr = All_Product_Page;
+      var updateArr = [...All_Product_Page];
   
       var min = updateArr[0]?.price;
       var max = updateArr[0]?.price;
@@ -64,7 +64,7 @@ export const Category = () => {
     const getdata = (value) => {
       // setCatagorySort({size:[],style:[],medium:[]})
   
-      var updateArr = All_Product_Page;
+      var updateArr = [...All_Product_Page];
   
       var data = updateArr?.filter((element) => {
         return (
@@ -105,7 +105,7 @@ export const Category = () => {
     const filterCatagory = () => {
       setRange([2000, 150000]);
       // console.log("hello cdchdccd")
-      var updateArr = All_Product_Page;
+      var updateArr = [...All_Product_Page];
   
       if (CatagorySort.medium.length) {
         updateArr = updateArr?.filter((element) => {
@@ -187,7 +187,7 @@ export const Category = () => {
       if (response.status === 200) {
         const data = response?.data;
         if(type=="category"){
-            setAll_product_page(data?.products)
+            setAll_product_page(data?.products|| [])
           
           
         }
@@ -246,7 +246,7 @@ export const Category = () => {
                   <span
                     style={{ fontSize: 14, fontWeight: 600, color: "#5e5e5e" }}
                   >
-                    ₹{MinMax("min")} - ₹{MinMax("max")}
+                    ₹{All_Product_Page?.length &&  (MinMax("min"))} - ₹{All_Product_Page?.length && (MinMax("max"))}
                   </span>
                 </div>
                 <form className="rangeForm">
@@ -254,8 +254,8 @@ export const Category = () => {
                     getAriaLabel={() => "Temperature range"}
                     value={range}
                     onChange={HandleRange}
-                    min={MinMax("min")}
-                    max={MinMax("max")}
+                    min={All_Product_Page?.length && (MinMax("min"))}
+                    max={All_Product_Page?.length && (MinMax("max"))}
                   />
                 </form>
                 <span style={{ fontSize: 14 }}>

@@ -163,6 +163,7 @@ z-index: 1;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
     padding: 1rem;
     background-color: rgba(234, 234, 234, 0.373);
+    min-width: 300px
 
  }
  .product-details-review>img{
@@ -362,7 +363,7 @@ margin: 0;
     height: 30px;
     -webkit-appearance: none;
     appearance: none;
-    background: #d7d7d7;
+    background: #bdbdbd;
     outline: none;
     border-radius: 2rem;
     cursor: pointer;
@@ -374,7 +375,7 @@ margin: 0;
     width: 30px;
     height: 30px;
     border-radius: 50%;
-    background: #898989;
+    background: #f6f4f4;
     position: absolute;
     top: 0;
     left: 0;
@@ -387,6 +388,6 @@ margin: 0;
   }
   
   .toggle:checked {
-    background: #00ed64;
+    background: #82ee8d;
   }
  

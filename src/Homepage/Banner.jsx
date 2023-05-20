@@ -54,9 +54,12 @@ const Banner = () => {
     return<Carousel.Item>
         <img
           className="d-block w-100"
-          src={element?.image}
+       
           alt="First slide"
-          style={{height:'80dvh', objectFit: 'cover'}}
+         
+          srcset={`images/login.png 500w,
+          ${element?.image} 800w`}
+ 
         />
      
       </Carousel.Item>

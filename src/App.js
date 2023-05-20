@@ -30,6 +30,8 @@ import Thankyou from './product/Thankyou';
 import Orders from './Orders/Orders';
 import OrderDetails from './Orders/OrderDetails';
 import { Category } from './product/Category';
+import Contactus from './pages/Contactus'
+import AboutUs from './pages/aboutus/AboutUs';
 
 
 
@@ -49,12 +51,15 @@ function App() {
 
 
 <Route element={<PresistLogin/>}>
+
 <Route path="/" element ={<><Navbar /><Homepage /><Footer /></>}/>
 <Route path="/Allproduct" element ={<><Navbar /><Product /><Footer /></>}/>
 <Route path="/Category/:id" element ={<><Navbar /><Category/><Footer /></>}/>
 <Route path="/productDetails/:id" element ={<><Navbar /><ProductDetails /><Footer /></>}/>
-<Route path="/thankyou" element ={<><Navbar /><Thankyou title={"Thnakyou For Choosing Us"} desc={"Payment was successful and your order is confirmed Enjoy the excellent service and fast delivery."}/><Footer /></>}/>
-<Route path="/orderFailed" element ={<><Navbar /><Thankyou title={"Soory Your Order Has Been Failed"} desc={"Call us Our Helpline number +917845126325 we will reach you soon"} /><Footer /></>}/>
+
+<Route path="/about-us" element ={<><Navbar /><AboutUs url={"/about"}/><Footer /></>}/>
+<Route path="/contact-us" element ={<><Navbar /><AboutUs/><Footer /></>}/>
+<Route path="/contact-us" element ={<><Navbar /><Contactus/><Footer /></>}/>
 
 <Route element ={<RequiredLogin/>}>
 <Route path="/cart" element ={<><Navbar /><Cart/><Footer /></>}/>
@@ -63,6 +68,9 @@ function App() {
 <Route path="/editprofile" element ={<><Navbar /><UserProfile/><Footer /></>}/>
 <Route path="/MyOrders" element ={<><Navbar /><Orders/><Footer /></>}/>
 <Route path="/orderDetails/:id" element ={<><Navbar /><OrderDetails/><Footer /></>}/>
+<Route path="/thankyou" element ={<><Navbar /><Thankyou title={"Thnakyou For Choosing Us"} desc={"Payment was successful and your order is confirmed Enjoy the excellent service and fast delivery."}/><Footer /></>}/>
+<Route path="/orderFailed" element ={<><Navbar /><Thankyou title={"Soory Your Order Has Been Failed"} desc={"Call us Our Helpline number +917845126325 we will reach you soon"} /><Footer /></>}/>
+
 </Route>
 </Route>
 

@@ -4,6 +4,7 @@ import Toast from '../Toast'
 
 import {AuthContext} from '../AuthProvider'
 import axios from '../axios'
+import Loader from './Loader'
 
 
 const PresistLogin =()=>{
@@ -77,7 +78,7 @@ const PresistLogin =()=>{
     return (
         <>
         {isloading  
-            ? <div id="cover-spin"></div>
+            ? <Loader />
             :<Outlet/>
          }
     </>

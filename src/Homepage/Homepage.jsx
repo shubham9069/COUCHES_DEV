@@ -57,11 +57,12 @@ const Homepage = () => {
   return (
     <>
     <Banner />
-<History content={history1}/>
 <DiscoverNow content={discover1} dataArr={CategoryData} />
+<History content={history1}/>
 <Collection />
-<DiscoverNow content={discover2} dataArr={All_Product_Page} type={"product"}  />
+<DiscoverNow content={discover2} dataArr={All_Product_Page} type={"product"} row={"row"} />
 <Aboutus content={Aboutus2} row={"row-reverse"}/>
+<DiscoverNow content={discover2} dataArr={All_Product_Page} type={"product"} row={"row-reverse"}  />
 <History content={history2}/>
 <CategoryBox />
 <Aboutus content={Aboutus1} row={"row"}/>

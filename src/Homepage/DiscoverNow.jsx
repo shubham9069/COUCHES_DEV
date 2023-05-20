@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 
 
-const DiscoverNow = ({content,dataArr,type}) => {
+const DiscoverNow = ({content,dataArr,type,row}) => {
   const {title,desc,sub_green,sub_text} = content
   const item_per_Slide=4;
   const [previndex,setprevindex] = useState(0)
@@ -48,7 +48,7 @@ setnextindex(next)
     <div className="section-padding ">
 
 
-    <div className='d-flex discover-container ' >
+    <div className='d-flex discover-container ' style={{flexDirection:row}} >
 
     <div className="discover-left">
     <div className=" container ">
@@ -56,7 +56,7 @@ setnextindex(next)
         <p className="section-subheading"> <span style={{color: '#02a89e'}}>{sub_green}</span> {sub_text}</p>
       
 
-        <p className='normal-text' style={{lineHeight:'35px'}}>{desc}</p>
+        <p className='normal-text' style={{lineHeight:'35px'}} id="desc-text">{desc}</p>
         
       
         <button className='themeButton ' style={{}}> Discover Now</button>

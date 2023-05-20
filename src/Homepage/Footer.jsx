@@ -1,4 +1,6 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
+
 
 const Footer = () => {
   return (
@@ -8,16 +10,15 @@ const Footer = () => {
 <div>
     <p className="section-subheading">ShowRoom</p>
 
-    <a className="normal-text link-a"><span className="Footer-icon"><i class="bi bi-house-door-fill "></i></span>viale Aldo Moro, 236
-            92026, Favara (AG), Italy</a>
+    <a className="normal-text link-a"><span className="Footer-icon"><i class="bi bi-house-door-fill "></i></span>3rd Floor , Rana Tower, New Palam Vihar, Phase I, Gurugram, Haryana 122016, India</a>
 
     <a className="normal-text link-a"><span className="Footer-icon" ><i class="bi bi-house-door-fill "></i></span>P.IVA: 01686270842</a>
 
-    <a className="normal-text link-a"><span className="Footer-icon"><i class="bi bi-telephone-fill "></i></span>(+39) 0922 420 200
+    <a className="normal-text link-a"><span className="Footer-icon"><i class="bi bi-telephone-fill "></i></span>(+91) 8178924823
 </a>
 
     <a className="normal-text link-a"><span className="Footer-icon"><i class="bi bi-envelope-fill "></i></span>
-customerservice@miliashop.com</a>
+    info@techninza.in</a>
 
 
 {/* ----icon --------------- */}
@@ -33,19 +34,20 @@ customerservice@miliashop.com</a>
 <div>
     <p className="section-subheading">Quick Link </p>
 
-    <a className="normal-text link-a">About Us</a>
-    <a className="normal-text link-a">Credit bill</a>
-    <a className="normal-text link-a">My Account </a>
-    <a className="normal-text link-a">Product </a>
+    <Link to="/about-us" className="normal-text link-a">About Us</Link>
+    <a className="normal-text link-a">Our Story</a>
+    <Link to="/editprofile" className="normal-text link-a">My Account </Link>
+    <Link to="/Allproduct" className="normal-text link-a">Product </Link>
 
    
 </div>
 <div>
     <p className="section-subheading">Contact Us  </p>
 
-    <a className="normal-text link-a">Privacy & policy </a>
-    <a className="normal-text link-a">Terms & Condition </a>
-    <a className="normal-text link-a">Contact form  </a>
+    <Link to="/contact-us" className="normal-text link-a">Contact Us </Link>
+    <a href="tel:555-555-5555" className="normal-text link-a">Call us </a>
+    <a href = "mailto: abc@example.com" className="normal-text link-a">Mail us </a>
+   
   
 
    
@@ -55,11 +57,11 @@ customerservice@miliashop.com</a>
 
     <a className="normal-text link-a">Privacy & policy </a>
     <a className="normal-text link-a">Terms & Condition </a>
-    <a className="normal-text link-a">My Account </a>
-    <a className="normal-text link-a">Product </a>
     <a className="normal-text link-a">Terms & Condition </a>
-    <a className="normal-text link-a">My Account </a>
-    <a className="normal-text link-a">Product </a>
+    <a className="normal-text link-a">Terms & Condition </a>
+    <a className="normal-text link-a">Terms & Condition </a>
+
+
 
    
 </div>

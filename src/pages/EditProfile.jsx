@@ -118,7 +118,7 @@ const [images,setimages] = useState("")
         {isLoading && (<Loader />)}
         <div className="d-flex section-paddingY edit-profile-container container" >
         <div className='edit-profile-container-left'>
-            <img src={userData.avatar}style={{marginBottom: '18px'}} ></img>
+            <img src={userData.avatar}style={{marginBottom: '18px',objectFit:'contain'}} ></img>
             <div className='center-div'>
             <input  className="imageinput" type='file'  name="images"  onChange={e => setimages(e.target.files[0])}></input>
             </div>

@@ -53,14 +53,14 @@ const filerSearch = debounce((inputvalue) => handleSearch(inputvalue), 300)
     <div className="navigation-bar">
     <div id="topbar">
     <div className="container">
-      <p >TAKE ADVANTAGE OF <strong>15%</strong> OFF ON ALL PRODUCTS |<strong> VOUCHER: SPRING15 </strong> | MORE INFO</p>
+      <p style={{marginBottom:0}}>TAKE ADVANTAGE OF <strong>15%</strong> OFF ON ALL PRODUCTS |<strong> VOUCHER: SPRING15 </strong> | MORE INFO</p>
     </div>
     </div>
     <div className=" between-div section-paddingX section-paddingY" style={{gridGap:15}}>
     <div className="" style={{ flex: '0 1 250px'}}>
     {/* <img style={{cursor: 'pointer'}} src="https://www.miliashop.com/themes/leo_cool_stuff/img/modules/appagebuilder/images/logo-new-milia.png" id="logo" onClick={()=>navigate('/')}></img>
      */}
-     <p style={{margin:0,fontSize:30, fontWeight:900,textTransform:'uppercase',color:'#383838'}}>Couchette</p>
+     <Link to='/' style={{textDecoration:'none',margin:0,fontSize:30, fontWeight:900,textTransform:'uppercase',color:'#383838'}}>Couchette</Link>
     </div>
 
     <div className=" d-flex flex-auto " style={{gridGap:15,flexWrap:'wrap',flex:1}} id='navigation-item'>
@@ -97,16 +97,30 @@ const filerSearch = debounce((inputvalue) => handleSearch(inputvalue), 300)
       {element?.sub_categories?.length ?
       <div className="nav-item-hover">
 
-      <div>
-      <h1 className='section-subheading'>{element?.name}</h1>
-      <div className="d-flex" style={{flexWrap:'wrap',gridGap:30}}>
-
+      <div style={{flex:1,display:'grid',gridTemplateColumns:'repeat(2,200px)'}}>
+      
       { element?.sub_categories?.map((item)=>{
 
-        return <Link to={"/Category/"+element?.id} className="normal-text link-a">{item?.name}</Link>
+        return item.child_categories.length ? <div className="d-flex" style={{flexWrap:'wrap',flexDirection:'column'}}>
+       <h5 style={{fontWeight:700,color: 'rgb(56, 56, 56)'}}>{item?.name}</h5>
+         {item?.child_categories?.map((child)=>{
+
+          return <>
+          <Link to={"/Category/"+element?.id} className="link-a sub-cat" style={{lineHeight:'19px',fontSize:12,fontWeight:600,color:'#999999'}}>{child?.name}</Link>
+        <div id="subcat-hover">
+        <p style={{marginBottom:4,textAlign:'center',fontWeight:400,fontSize:35}}>{item?.name}</p>
+        <p style={{marginBottom:0,textAlign:'center',fontWeight:400}}>{child?.name}</p>
+        <img src={child?.icon} id="subcat-img"></img>
+        </div>
+          </>
+        })}
+             
+        
+        </div>
+        :null
+     
       })}
      
-      </div>
       </div>
   </div>
   :null}
@@ -130,7 +144,7 @@ const filerSearch = debounce((inputvalue) => handleSearch(inputvalue), 300)
       <i className="bi bi-person dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"></i>
       
       <ul className="dropdown-menu navbardropdown">
-     <li> <img style={{height:50,width:50,borderRadius:'50%',margin:'10px auto'}} src={userData?.avatar}></img></li>
+     <li> <img style={{height:70,width:70,borderRadius:'50%',margin:'10px auto',objectFit:'cover'}} src={userData?.avatar}></img></li>
     <li><Link to="/editprofile" className="dropdown-item" href="#"> <i className="bi bi-person-lines-fill "></i> Edit Profile</Link></li>
     <li><Link to="/MyOrders" className="dropdown-item" ><i className="bi bi-bag"></i>my orders</Link></li>
     <li onClick={logout}><a className="dropdown-item" href="#"> <i className="bi bi-list" ></i>Logout</a></li>

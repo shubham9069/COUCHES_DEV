@@ -207,15 +207,18 @@ setReview_Desc( "")
         <div>
           <h4>Address</h4>
           
+            {orderDetails?.address?.split(",")?.map((e)=>{
 
-             <p style={{color:'#939393',fontSize:12,width:100}}>{orderDetails?.address}</p>
+              return    <p style={{color:'#939393',fontSize:12,width:100,marginBottom:0}}>{e}</p>
+            })}
+             
         
          
         </div>
       </div>
 
-      <div className="orderDetails-bottom">
-        <div className="orderDetails-help">
+      <div className="orderDetails-bottom" style={{flexWrap:'wrap-reverse'}}>
+        <div className="orderDetails-help" >
         <h4 style={{marginBottom:'1rem'}}>Need Help</h4>
         <p style={{color:'#939393',fontSize:13}}><i class="bi bi-question-circle-fill" style={{color:'#939393',fontSize:15,marginRight:8}}></i>Need Help ?</p>
         <p style={{color:'#939393',fontSize:13}}><i class="bi bi-truck" style={{color:'#939393',fontSize:15,marginRight:8}}></i>Delivery Info ?</p>

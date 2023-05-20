@@ -232,7 +232,7 @@ const ProductDetails = () => {
 
      
       <p className="normal-text" style={{marginBottom:'2rem',textAlign:'center'}}>Description &nbsp; /  &nbsp; Review </p>
-      <div className='product-details-bottom d-flex section-paddingX container' style={{gridGap:30,padding:'1rem 0'}}>
+      <div className='product-details-bottom d-flex section-paddingX container' style={{gridGap:30,padding:'1rem 0',flexWrap:'wrap-reverse'}}>
 
     <div className='product-details-bottom-left ' style={{flex:1}}>
     {productDetails?.reviews?.length ? 

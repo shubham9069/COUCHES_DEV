@@ -30,7 +30,7 @@ font-size: 20px ;
     text-align: center;
     background: #e2bc3f;
     /* background: #000; */
-    padding: 15px 0 5px 0;
+    padding: 10px 0 10px 0;
 }
 #hamburger{
     background-color:rgb(63, 63, 63);
@@ -44,10 +44,13 @@ color:white !important;
 .nav-item-hover{
     animation: 0.5s 1 alternate fade;
     display: none !important;
-    /* width: 50vw; */
-    width: max-content;
+    width: 60vw;
+   min-height:300px;
+   max-width: 1000px;
     padding: 1rem 2rem;
     top: 100%;
+    left:-200px;
+   
     background-color:white;
     position:absolute;
     opacity: 0;
@@ -58,6 +61,24 @@ color:white !important;
     flex-direction: column !important;
     opacity: 1;
     
+}
+#subcat-hover{
+    animation: 0.5s 1 alternate fade;
+    top: 25px;
+    position: absolute;
+    right: 50px;
+   opacity: 0;
+   display: none;
+}
+#subcat-img{
+
+    width: 200px;
+    height:200px;
+    object-fit: contain;
+}
+.sub-cat:hover  + #subcat-hover{
+    display: block;
+    opacity: 1
 }
 @keyframes fade {
     0% {
@@ -75,7 +96,7 @@ color:white !important;
     
 }
 .nav-item-hover a{
-   flex-basis: 100px;
+   
     
 }
 #navigation-item>a:hover .nav-item-hover{
@@ -153,13 +174,15 @@ color:white !important;
 }
 
 
+
 /* ---------------discovery------------------------ */
 
 .discover-container{
    
     grid-gap:10px;
     transition: all 200ms ease 0s;
-   
+    max-width: 2000px;
+   margin: 0 auto;
     
 }
 .discover-left *{
@@ -185,6 +208,7 @@ object-fit: contain;
 
 margin:  0 auto;
 transition: all 0.6s ease-in-out;
+max-width: 400px;
 }
 .discover-div:hover img{
     transform: scale(1.1);
@@ -229,6 +253,23 @@ transition: all 0.6s ease-in-out;
             display: none;
             
         }
+}
+@media screen and (max-width:550px) {
+    .discover-container{
+        flex-direction: column !important;
+        grid-gap:20px
+    }
+    .discover-left *{
+        text-align: center;
+        }
+    .discover-left>div>button{
+        margin: 0 auto;
+        }
+        .discover-right>a:nth-child(2){
+            display: none;
+            
+        }
+        
 }
 
 /* =============colllection================== */
