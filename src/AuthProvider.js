@@ -3,6 +3,7 @@ import axios from "./axios";
 import Loader from "./pages/Loader";
 import Toast from "./Toast";
 import { Link,useNavigate,useLocation } from "react-router-dom";
+import { product, size } from "./DummyData.ts";
 
 
 export const AuthContext = createContext({})
@@ -11,7 +12,7 @@ const AuthProvider = ({children}) => {
  
     const [userToken, setUserToken] = useState("")
     const [userData, setUserData] = useState("")
-    const [All_Product_Page,setAll_Product_Page ] = useState([]);
+    const [All_Product_Page,setAll_Product_Page ] = useState(product);
     const [Catagory,setCatagory ] = useState({mediums:[],styles:[],sizes:[],artists:[]});
     const [homepage,setHomepage] = useState({
       Banner:[],
@@ -78,7 +79,6 @@ const AuthProvider = ({children}) => {
 
         switch(type){
           case 'product': 
-          setAll_Product_Page(data.products);
           setCatagory((p)=>({...p,["mediums"]:data.mediums}));
           setCatagory((p)=>({...p,["styles"]:data.styles}));
           setCatagory((p)=>({...p,["sizes"]:data.sizes}));
@@ -105,10 +105,8 @@ const AuthProvider = ({children}) => {
      }
     }
 
-    useEffect(()=>{
-
-      get_all('/get_all_products','product')
-    
+    useEffect(()=>{    
+      get_all("/get_all_products", "product");
       get_all('/get_all_categories','category')
     },[])
 

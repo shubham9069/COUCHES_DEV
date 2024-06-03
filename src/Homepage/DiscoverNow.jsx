@@ -68,7 +68,7 @@ setnextindex(next)
 
         return   <Link to={type=="product" ? "/productDetails/" + element?.product_id : "/Category/"+element?.id}  style={{ background:'#f8f8f8'}} className="discover-div link-a">
     <img src={element?.icon || element?.images?.length &&(element?.images[0])} id='discover_img'></img>
-    <p style={{ }}>{element?.name} <span style={{fontWeight:500}}>&#8377;{element?.price}</span></p>
+    <p style={{ }}>{element?.name} <span style={{fontWeight:500}}>{element?.price}</span></p>
         </Link>
     })}
     {/* <div className="discover-navigate-icon">
